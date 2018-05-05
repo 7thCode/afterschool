@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    table(class="table")
+        thead
+            tr
+                th(scope="col") Name
+                th(scope="col") Value
+        tbody
+            tr
+                th(scope="row") MarketID
+                td #{result.LastPrice}
+            tr
+                th(scope="row") Change
+                td #{result.Change}
+            tr
+                th(scope="row") HighPrice
+                td #{result.HighPrice}
+            tr
+                th(scope="row") LowPrice
+                td #{result.LowPrice}
+            tr
+                th(scope="row") Volume
+                td #{result.Volume}
+            tr
+                th(scope="row") BTCVolume
+                td #{result.BTCVolume}
+            tr
+                th(scope="row") TradeCount
+                td #{result.TradeCount}
+            tr
+                th(scope="row") BidPrice
+                td #{result.BidPrice}
+            tr
+                th(scope="row") AskPrice
+                td #{result.AskPrice}
+            tr
+                th(scope="row") BuyOrderCount
+                td #{result.BuyOrderCount}
+            tr
+                th(scope="row") SellOrderCount
+                td #{result.SellOrderCount}
+
+

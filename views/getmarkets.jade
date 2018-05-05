@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    table(class="table")
+        thead
+            tr
+                th(scope="col") id
+                th(scope="col") MarketAssetName
+                th(scope="col") MarketAssetCode
+                th(scope="col") MarketAssetID
+                th(scope="col") MarketAssetType
+                th(scope="col") BaseCurrency
+                th(scope="col") BaseCurrencyCode
+                th(scope="col") BaseCurrencyID
+                th(scope="col") Active
+        tbody
+            each val in result
+                tr
+                    th(scope="row") #{val.MarketID}
+                    td #{val.MarketAssetName}
+                    td #{val.MarketAssetCode}
+                    td #{val.MarketAssetID}
+                    td #{val.MarketAssetType}
+                    td #{val.BaseCurrency}
+                    td #{val.BaseCurrencyCode}
+                    td #{val.BaseCurrencyID}
+                    td #{val.Active}

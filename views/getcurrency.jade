@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    table(class="table")
+        thead
+            tr
+                th(scope="col") Name
+                th(scope="col") Value
+        tbody
+            tr
+                th(scope="row") CurrencyID
+                td #{result.CurrencyID}
+            tr
+                th(scope="row") Name
+                td #{result.Name}
+            tr
+                th(scope="row") TickerCode
+                td #{result.TickerCode}
+            tr
+                th(scope="row") WalletStatus
+                td #{result.WalletStatus}
+            tr
+                th(scope="row") Type
+                td #{result.Type}

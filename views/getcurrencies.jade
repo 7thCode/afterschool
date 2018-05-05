@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    table(class="table")
+        thead
+            tr
+                th(scope="col") CurrencyID
+                th(scope="col") Name
+                th(scope="col") TickerCode
+                th(scope="col") WalletStatus
+                th(scope="col") Type
+        tbody
+            each val in result
+                tr
+                    th(scope="row") #{val.CurrencyID}
+                    td #{val.Name}
+                    td #{val.TickerCode}
+                    td #{val.WalletStatus}
+                    td #{val.Type}
+                    //td
+                        a(class="btn btn-primary" href="/users/getcurrency/#{val.CurrencyID}") summary

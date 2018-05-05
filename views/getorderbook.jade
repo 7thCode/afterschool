@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    div sell
+    table(class="table")
+        thead
+            tr
+                th(scope="col") Type
+                th(scope="col") Price
+                th(scope="col") OrderTime
+                th(scope="col") Quantity
+        tbody
+            each val in result.SellOrders
+                tr
+                    th(scope="row") #{val.Type}
+                    td #{val.Price}
+                    td #{val.OrderTime}
+                    td #{val.Quantity}
+
+    div buy
+    table(class="table")
+        thead
+            tr
+                th(scope="col") Type
+                th(scope="col") Price
+                th(scope="col") OrderTime
+                th(scope="col") Quantity
+        tbody
+            each val in result.BuyOrders
+                tr
+                    th(scope="row") #{val.Type}
+                    td #{val.Price}
+                    td #{val.OrderTime}
+                    td #{val.Quantity}

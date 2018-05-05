@@ -1,0 +1,39 @@
+extends layout
+
+block content
+    table(class="table")
+        thead
+            tr
+                th(scope="col") MarketID
+                th(scope="col") LastPrice
+                th(scope="col") Change
+                th(scope="col") HighPrice
+                th(scope="col") LowPrice
+                th(scope="col") Volume
+                th(scope="col") BTCVolume
+                th(scope="col") TradeCount
+                th(scope="col") BidPrice
+                th(scope="col") AskPrice
+                th(scope="col") BuyOrderCount
+                th(scope="col") SellOrderCount
+        tbody
+            each val in result
+                tr
+                    th(scope="row") #{val.MarketID}
+                    td #{val.LastPrice}
+                    td #{val.Change}
+                    td #{val.HighPrice}
+                    td #{val.LowPrice}
+                    td #{val.Volume}
+                    td #{val.BTCVolume}
+                    td #{val.TradeCount}
+                    td #{val.BidPrice}
+                    td #{val.AskPrice}
+                    td #{val.BuyOrderCount}
+                    td #{val.SellOrderCount}
+                    //td
+                        a(class="btn btn-warning" href="/users/getmarketsummary/#{val.MarketID}") summary
+
+                    //td
+                        a(class="btn btn-success" href="/users/getorderbook/#{val.MarketID}") book
+
